@@ -1,0 +1,5 @@
+# lxml —— zotero_cite.py 读写 document.xml / custom.xml 用
+lxml>=4.9
+
+# python-docx —— backfill_itemdata.py / dedup_fields.py 用
+python-docx>=1.1

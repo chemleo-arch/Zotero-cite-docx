@@ -1,0 +1,14 @@
+{
+  "style": "afm",
+  "bibliography": {"heading": "References"},
+  "paragraphs": [
+    {
+      "index": 4,
+      "text": "Antimicrobial peptides act primarily on the bacterial envelope.{{cite:ABCD1234|[1]}} The species {{it:Escherichia coli}} and {{it:Staphylococcus aureus}} were both tested, with an MIC of {{ph:NUM-1}} \u00b5g mL\u207b\u00b9.{{cite:EFGH5678,IJKL9012|[2,3]}}"
+    },
+    {
+      "index": 7,
+      "text": "Self-assembly was confirmed by {{bd:circular dichroism}} and TEM imaging.{{cite:MNOP3456|[4]}}"
+    }
+  ]
+}

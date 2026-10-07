@@ -1,0 +1,19 @@
+# Word 临时锁文件
+~$*.docx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 切勿提交稿件与样本文档（可能含未发表数据）
+*.docx
+!examples/*.docx
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

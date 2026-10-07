@@ -1,0 +1,71 @@
+examples:
+  - id: cite-into-manuscript
+    title:
+      zh: 把 Zotero 文献引到指定章节
+      en: Cite Zotero items into a section
+    description:
+      zh: 从本地 Zotero 库取条目，写入可刷新的引用域与参考文献表域
+      en: Write refreshable Zotero citation fields and a bibliography field into a .docx
+    prompt:
+      zh: |-
+        在我这份 Word 稿件里插入 Zotero 引用，并生成参考文献表（能在 Word 里用 Zotero 刷新）：
+        稿件：{{docx 路径}}
+        要引用的文献：{{条目 key 或标题关键词，如 22J52PUE}}
+        插入位置：{{第几段之后}}
+      en: |-
+        Insert Zotero citations into my Word manuscript and add a bibliography that refreshes in Word:
+        Manuscript: {{path to .docx}}
+        Items to cite: {{item keys or title keywords, e.g. 22J52PUE}}
+        Insert after: {{paragraph index}}
+  - id: switch-citation-style
+    title:
+      zh: 一键切换整篇引文样式
+      en: Switch the whole document's citation style
+    description:
+      zh: 不打开 Word 即可把整篇文档的引文样式换成国标或目标期刊样式
+      en: Change the document's citation style to GB/T 7714 or a target journal style without opening Word
+    prompt:
+      zh: |-
+        把这份稿件的引文样式换成 {{目标样式，如 GB/T 7714 顺序编码制 / AFM / ACS}}：
+        稿件：{{docx 路径}}
+        说明：改完我在 Word 里点 Zotero 的 Refresh 让它整体重排。
+      en: |-
+        Switch this manuscript's citation style to {{target style, e.g. GB/T 7714 numeric / AFM / ACS}}:
+        Manuscript: {{path to .docx}}
+        Note: I will hit Zotero's Refresh in Word afterwards to re-typeset everything.
+  - id: edit-refreshed-draft
+    title:
+      zh: 改已刷新稿的句子而不破坏引用域
+      en: Edit a refreshed draft without breaking fields
+    description:
+      zh: 在已被 Zotero 刷新过的稿件上做 run 级定点替换，域与编号缓存不受影响
+      en: Run-level surgical edits on an already-refreshed manuscript, leaving fields intact
+    prompt:
+      zh: |-
+        这份稿件已经用 Zotero 刷新过了，请帮我改几句、不要动引用域：
+        稿件：{{docx 路径}}
+        修改：
+        - 第 {{段号}} 段：“{{原句}}” 改为 “{{新句}}”
+        另存为新版本，不要覆盖原稿。
+      en: |-
+        This manuscript has already been refreshed with Zotero — please edit a few sentences without touching the citation fields:
+        Manuscript: {{path to .docx}}
+        Edits:
+        - Paragraph {{index}}: "{{old text}}" -> "{{new text}}"
+        Save as a new version; do not overwrite the original.
+  - id: backfill-and-dedup
+    title:
+      zh: 补全域快照与去重文献表
+      en: Backfill field snapshots and de-duplicate the bibliography
+    description:
+      zh: 为缺 itemData 的引用域补全 CSL 快照，并合并同 DOI 的重复条目
+      en: Fill in missing CSL itemData snapshots and merge duplicate items sharing a DOI
+    prompt:
+      zh: |-
+        这份稿件的参考文献表刷新后编号混乱、还有重复条目，帮我排查：
+        稿件：{{docx 路径}}
+        请先诊断（列出缺 itemData 的域、按 DOI 分组的重复条目），确认后再另存新版本修复。
+      en: |-
+        After refreshing, this manuscript's bibliography has scrambled numbers and duplicate entries — please diagnose:
+        Manuscript: {{path to .docx}}
+        Diagnose first (list fields missing itemData, and duplicate groups by DOI), then save the fix as a new version.

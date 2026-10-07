@@ -1,0 +1,22 @@
+[
+  {
+    "index": 59,
+    "old": "they suppress the bacterial challenge, temper the inflammatory response",
+    "new": "they temper the inflammatory response"
+  },
+  {
+    "index": 61,
+    "old": "the tissue burden fell by \u27e6NUM-6\u27e7 log\u2081\u2080 CFU per gram and the wound closed faster",
+    "new": "the tissue burden fell notably and the wound closed faster"
+  },
+  {
+    "index": 88,
+    "insert_after": "In summary, the halogenated dipeptide hydrogels reduced the bacterial burden while promoting wound closure.{{cite:ABCD1234|[7]}}",
+    "clone_from": 87
+  },
+  {
+    "index": 92,
+    "old": "Further work will address the mechanism.",
+    "new": "Further work will address the mechanistic link between halogen identity and membrane insertion.{{cite:QRST7890|[8]}}"
+  }
+]
